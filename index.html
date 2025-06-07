@@ -5,16 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Web App</title>
     <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <!-- Navbar -->
-    <div class="container navbarContainer">
+    <div class="navbarContainer">
       <div class="home">
         <p>HD-WEB</p>
       </div>
-      <div class="nav_right">
+      <div class="nav-right">
         <div>
-          <ul class="nav_list">
+          <ul class="nav-list">
             <li>Home</li>
             <li>Contact</li>
           </ul>
@@ -26,60 +30,58 @@
     </div>
 
     <!-- Main Content -->
-    <div class="container contentContainer">
+    <div class="contentContainer">
       <p>Main Content</p>
     </div>
 
-    <!-- Clock & Praying Times -->
-    <div class="container clockContainer">
-      <div id="clock">Time</div>
-      <div class="prayContainer">
-        <p class="pray-text">Praying Time</p>
-        <div>
-          <label for="citySelect">City Select :</label>
-          <select id="citySelect">
-            <option value="Jakarta">Jakarta</option>
-            <option value="Depok">Depok</option>
-            <option value="Bandung">Bandung</option>
-            <option value="Surabaya">Surabaya</option>
-            <option value="Medan">Medan</option>
-            <option value="Yogyakarta">Yogyakarta</option>
-            <option value="Padang">Padang</option>
-            <option value="Timpeh">Timpeh</option>
-          </select>
-          <div class="prayTime">
-            <ul>
-              <li>Subuh</li>
-              <br />
-              <li>Dzuhur</li>
-              <br />
-              <li>Ashar</li>
-              <br />
-              <li>Magrib</li>
-              <br />
-              <li>Isya'</li>
-              <br />
-            </ul>
-            <ul>
-              <li class="subuh">#</li>
-              <br />
-              <li class="dzuhur">#</li>
-              <br />
-              <li class="ashar">#</li>
-              <br />
-              <li class="magrib">#</li>
-              <br />
-              <li class="isya">#</li>
-              <br />
-            </ul>
-          </div>
-        </div>
-      </div>
+    <!-- Dates & Clock -->
+    <div class="calendar">
+      <div id="date">Loading tanggal...</div>
+      <div id="time">Loading waktu...</div>
     </div>
 
-    <!-- Calendar -->
-    <div class="container calendarContainer">
-      <p>Calendar</p>
+    <!-- Praying Times -->
+    <div class="prayContainer">
+      <p class="pray-text">Praying Time</p>
+      <div>
+        <label for="citySelect">City Select :</label>
+        <select id="citySelect">
+          <option value="Jakarta">Jakarta</option>
+          <option value="Depok">Depok</option>
+          <option value="Bandung">Bandung</option>
+          <option value="Surabaya">Surabaya</option>
+          <option value="Medan">Medan</option>
+          <option value="Yogyakarta">Yogyakarta</option>
+          <option value="Padang">Padang</option>
+          <option value="Timpeh">Timpeh</option>
+        </select>
+        <div class="prayTime">
+          <ul>
+            <li>Subuh</li>
+            <br />
+            <li>Dzuhur</li>
+            <br />
+            <li>Ashar</li>
+            <br />
+            <li>Magrib</li>
+            <br />
+            <li>Isya'</li>
+            <br />
+          </ul>
+          <ul>
+            <li class="subuh">#</li>
+            <br />
+            <li class="dzuhur">#</li>
+            <br />
+            <li class="ashar">#</li>
+            <br />
+            <li class="magrib">#</li>
+            <br />
+            <li class="isya">#</li>
+            <br />
+          </ul>
+        </div>
+      </div>
     </div>
 
     <script src="script.js"></script>

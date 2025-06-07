@@ -1,53 +1,72 @@
 body {
   display: grid;
-  grid-template-rows: 1fr 2fr 2fr;
-  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 50px 130px 1fr auto;
+  grid-template-columns: repeat(5, 1fr);
   background: #f0f0f0;
   font-family: Arial, Helvetica, sans-serif;
   gap: 10px;
+  margin: 0px 20px;
 }
+
+@font-face {
+    font-family: 'clockFont';
+    src: url('/file/font/Technology-Bold.ttf') format('truetype');
+  }
 
 ul {
   list-style-type: none;
   text-align: justify;
 }
 
-.container {
-  border: 3px solid black;
-  text-align: center;
-}
-
 /* Navbar*/
 .navbarContainer {
   display: flex;
+  grid-row-start: 1;
+  grid-row-end: 1;
   grid-column-start: 1;
   grid-column-end: -1;
 }
 
-.nav_right {
+.nav-right {
   display: flex;
-  justify-content: flex-end;
   gap: 1em;
 }
 
-.nav_list {
+.nav-list {
   display: flex;
   gap: 1em;
 }
 
 /* Main Content*/
 .contentContainer {
-  grid-row-start: 2;
-  grid-row-end: -1;
+  outline: 2px solid black;
+  grid-area: 2 / 1 / 4 / 5;
 }
 
-/* CLock and Praying Time*/
-#clock {
-  font-size: 3em;
-  font-family: Arial, sans-serif;
-  font-weight: bold;
-  margin-top: 50px;
+/* Dates & Time*/
+.calendar {
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  }
+
+  #date {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  #time {
+    font-size: 48px;
+    font-weight: bold;
+    font-family: 'clockFont', sans-serif;
+  }
+
+/* Praying Time*/
+.prayContainer{
   text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
 }
 
 .pray-text{
@@ -56,9 +75,4 @@ ul {
 
 .prayTime {
   display: flex;
-}
-
-/* Calendar */
-.calendarContainer {
-  grid-column-start: 2;
 }
