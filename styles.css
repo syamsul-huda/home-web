@@ -1,0 +1,43 @@
+body{
+  display: grid;
+  grid-template-rows: 1fr 2fr 2fr;
+  grid-template-columns: 3fr 1fr;
+  background: #f0f0f0; 
+  font-family: Arial, Helvetica, sans-serif;
+  gap: 10px;
+}
+
+ul{
+  list-style-type: none;
+}
+
+.nav_list{
+  display: flex;
+  gap: 1em;
+}
+
+.container{
+  border: 3px solid black;
+  text-align: center;
+}
+
+.navbarContainer{
+  display: flex;
+  grid-column-start: 1;
+  grid-column-end: -1;
+}
+
+.nav_right{
+  display: flex;
+  justify-content: flex-end;
+  gap: 1em;
+}
+
+.contentContainer{
+  grid-row-start: 2 ;
+  grid-row-end: -1;
+}
+
+.calendarContainer{
+  grid-column-start: 2 ;
+}
